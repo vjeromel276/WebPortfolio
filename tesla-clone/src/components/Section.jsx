@@ -1,19 +1,18 @@
 import downArrow from "../images/down-arrow.svg";
 import styled from "styled-components";
 
-export const Section = ({ car }) => {
-  console.log(car);
+export const Section = ({ item }) => {
   return (
     <>
-      <Wrap style={{ backgroundImage: `url(${car.bgImage})` }}>
+      <Wrap style={{ backgroundImage: `url(${item.bgImage})` }}>
         <ItemText>
-          <h1>{car.title}</h1>
-          <p>{car.description}</p>
+          <h1>{item.title}</h1>
+          <p>{item.description}</p>
         </ItemText>
         <Button>
           <ButtonGroup>
-            <ButtonLeft>{car.lftBtnTxt}</ButtonLeft>
-            <ButtonRight>{car.rgtBtnTxt}</ButtonRight>
+            <ButtonLeft>{item.lftBtnTxt}</ButtonLeft>
+            {item.rgtBtnTxt && <ButtonRight>{item.rgtBtnTxt}</ButtonRight>}
           </ButtonGroup>
           <DownArrow src={downArrow} />
         </Button>
@@ -32,10 +31,13 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  //& This is how you can pass &use props in styled components
+  /* background-image: (${(props) => `url("/images/${props.bgImage}")`}); */
 `;
 const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
+  font-weight: 100;
 `;
 const Button = styled.div`
   display: flex;
@@ -58,9 +60,10 @@ const ButtonLeft = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  opacity: 0.85;
+  /* opacity: 0.85; */
   text-transform: uppercase;
   font-size: 12px;
+  font-weight: 100;
   margin: 8px;
   transition: 500ms;
   &:hover {
@@ -73,8 +76,8 @@ const ButtonRight = styled(ButtonLeft)`
   color: rgba(0, 0, 0, 0.8);
   transition: 500ms;
   &:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
   }
 `;
 
