@@ -29,21 +29,28 @@ const Container = styled.div`
   background: none;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
-  width: 100%;
+  width: 100vw;
 `;
 const Content = styled.div`
   display: flex;
-  width: 50%;
+  width: 35%;
+  line-height: 1.5;
   justify-content: space-between;
   padding-left: 20px;
+  font-weight: 100;
+  font-size: 8px;
+
+  font-family: "Helvetica Neue";
 `;
 const Logo = styled.div`
-  width: 20%;
+  width: 05%;
+  margin-left: 30px;
 `;
 const NavBar = styled.div`
   display: flex;
   width: 15%;
-  padding-left: 50px;
-  justify-content: space-between;
+  font-size: 10px;
+  > h2 {
+    padding-right: 10px;
+  }
 `;
