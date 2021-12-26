@@ -1,3 +1,4 @@
+import { Menu as MenuIcon } from "@mui/icons-material";
 import logo from "../images/logo.svg";
 import styled from "styled-components";
 
@@ -19,7 +20,7 @@ export const Header = () => {
         <RightMenu>
           <a href="#.com">Shop</a>
           <a href="#.com">Tesla Account</a>
-          <a href="#.com">Menu</a>
+          <img src={MenuIcon} alt="" />
         </RightMenu>
       </Container>
     </>
@@ -57,7 +58,6 @@ const Logo = styled.div`
   margin: 0 30px;
   cursor: pointer;
   contain: content;
-  border: dashed 1px darkblue;
 `;
 const RightMenu = styled.div`
   /* display: flex;
