@@ -20,7 +20,7 @@ export const Header = () => {
         <RightMenu>
           <a href="#.com">Shop</a>
           <a href="#.com">Tesla Account</a>
-          <img src={MenuIcon} alt="" />
+          {MenuIcon}
         </RightMenu>
       </Container>
     </>
@@ -63,6 +63,7 @@ const RightMenu = styled.div`
   /* display: flex;
   margin: 0 30px;
   border: dashed 1px darkblue; */
+  margin-right: 45px;
   > a {
     cursor: pointer;
     font-weight: 600;
