@@ -1,3 +1,4 @@
+import logo from "../images/logo.svg";
 import styled from "styled-components";
 
 export const Header = () => {
@@ -5,52 +6,68 @@ export const Header = () => {
     <>
       <Container>
         <Logo>
-          image
-          <img src="" alt="" />
+          <img src={logo} alt="logo" />
         </Logo>
-        <Content>
-          <h2>Model S</h2>
-          <h2>Model 3</h2>
-          <h2>Model X</h2>
-          <h2>Model Y</h2>
-          <h2>Solar Roof</h2>
-          <h2>Solar Panels</h2>
-        </Content>
-        <NavBar>
-          <h2>Shop</h2>
-          <h2>Account</h2>
-          <h2>Menu</h2>
-        </NavBar>
+        <Menu>
+          <a href="#.com">Model S</a>
+          <a href="#.com">Model 3</a>
+          <a href="#.com">Model X</a>
+          <a href="#.com">Model Y</a>
+          <a href="#.com">Solar Roof</a>
+          <a href="#.com">Solar Panels</a>
+        </Menu>
+        <RightMenu>
+          <a href="#.com">Shop</a>
+          <a href="#.com">Tesla Account</a>
+          <a href="#.com">Menu</a>
+        </RightMenu>
       </Container>
     </>
   );
 };
 const Container = styled.div`
-  background: none;
+  min-height: 60px;
+  position: fixed;
   display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* border: dashed 1px darkblue; */
+  /* width: 100vw; */
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
 `;
-const Content = styled.div`
+const Menu = styled.div`
   display: flex;
-  width: 35%;
-  line-height: 1.5;
-  justify-content: space-between;
-  padding-left: 20px;
-  font-weight: 100;
-  font-size: 8px;
-
-  font-family: "Helvetica Neue";
+  flex: 1;
+  align-content: center;
+  > a {
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 10px;
+    word-wrap: normal;
+  }
+  @media (max-width: 768px) {
+    visibility: hidden;
+  }
 `;
 const Logo = styled.div`
-  width: 05%;
-  margin-left: 30px;
+  margin: 0 30px;
+  cursor: pointer;
+  contain: content;
+  border: dashed 1px darkblue;
 `;
-const NavBar = styled.div`
-  display: flex;
-  width: 15%;
-  font-size: 10px;
-  > h2 {
-    padding-right: 10px;
+const RightMenu = styled.div`
+  /* display: flex;
+  margin: 0 30px;
+  border: dashed 1px darkblue; */
+  > a {
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+    word-wrap: normal;
   }
 `;
