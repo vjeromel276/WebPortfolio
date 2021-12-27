@@ -1,4 +1,4 @@
-import { Menu as MenuIcon } from "@mui/icons-material";
+import { Menu as MenuIcon } from "@material-ui/icons";
 import logo from "../images/logo.svg";
 import styled from "styled-components";
 
@@ -20,7 +20,9 @@ export const Header = () => {
         <RightMenu>
           <a href="#.com">Shop</a>
           <a href="#.com">Tesla Account</a>
-          {MenuIcon}
+          {/* <a href="#.com"> */}
+          <MenuIcon style={{ paddingBottom: 5 }} />
+          {/* </a> */}
         </RightMenu>
       </Container>
     </>
@@ -29,11 +31,9 @@ export const Header = () => {
 const Container = styled.div`
   min-height: 60px;
   position: fixed;
-  display: flex;
-  /* justify-content: space-between; */
+  display: inline-flex;
+  justify-content: flex-start;
   align-items: center;
-  /* border: dashed 1px darkblue; */
-  /* width: 100vw; */
   top: 0;
   left: 0;
   right: 0;
@@ -42,10 +42,11 @@ const Container = styled.div`
 const Menu = styled.div`
   display: flex;
   flex: 1;
+  height: 100%;
   align-content: center;
+  justify-content: center;
   > a {
     cursor: pointer;
-    font-weight: 600;
     text-transform: uppercase;
     padding: 0 10px;
     word-wrap: normal;
@@ -58,17 +59,20 @@ const Logo = styled.div`
   margin: 0 30px;
   cursor: pointer;
   contain: content;
+  flex: 0.4;
 `;
 const RightMenu = styled.div`
-  /* display: flex;
-  margin: 0 30px;
-  border: dashed 1px darkblue; */
-  margin-right: 45px;
+  display: flex;
+  flex: 0.6;
+  /* margin: 0 30px; */
+  align-content: center;
+  justify-content: center;
   > a {
     cursor: pointer;
-    font-weight: 600;
     text-transform: uppercase;
     margin-right: 10px;
     word-wrap: normal;
+    > svg {
+    }
   }
 `;

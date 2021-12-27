@@ -1,12 +1,19 @@
 import { Section } from "./Section";
-import accessories from "../images/accessories.jpg";
 import model3 from "../images/model-3.jpg";
 import models from "../images/model-s.jpg";
 import modelx from "../images/model-x.jpg";
 import modely from "../images/model-y.jpg";
 import solarPanel from "../images/solar-panel.jpg";
-import solarRoof from "../images/solar-roof.jpg";
 import styled from "styled-components";
+
+// import accessories from "../images/accessories.jpg";
+
+
+
+
+
+// import solarRoof from "../images/solar-roof.jpg";
+
 
 const Items = [
   (model3 = {
@@ -44,19 +51,19 @@ const Items = [
     lftBtnTxt: "Order Now",
     rgtBtnTxt: "Learn More",
   }),
-  (solarRoof = {
-    title: "Solar for New Roofs",
-    bgImage: `${solarRoof}`,
-    description: "Solar Roof COsts Less Than a New Roof",
-    lftBtnTxt: "Order Now",
-    rgtBtnTxt: "Learn More",
-  }),
-  (accessories = {
-    title: "Accessories",
-    bgImage: `${accessories}`,
-    description: "",
-    lftBtnTxt: "Shop Now",
-  }),
+  // (solarRoof = {
+  //   title: "Solar for New Roofs",
+  //   bgImage: `${solarRoof}`,
+  //   description: "Solar Roof COsts Less Than a New Roof",
+  //   lftBtnTxt: "Order Now",
+  //   rgtBtnTxt: "Learn More",
+  // }),
+  // (accessories = {
+  //   title: "Accessories",
+  //   bgImage: `${accessories}`,
+  //   description: "",
+  //   lftBtnTxt: "Shop Now",
+  // }),
 ];
 
 export const Home = () => {
