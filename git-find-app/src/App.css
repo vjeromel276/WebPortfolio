@@ -15,6 +15,10 @@
   padding: 0;
 }
 
+i {
+  padding-right: 10px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
