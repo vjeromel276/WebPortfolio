@@ -1,16 +1,12 @@
 import "./VideoFooter.css";
 
-import { MusicNote } from "@material-ui/icons";
-
-export const VideoFooter = () => {
+export const VideoFooter = ({ channel, description, song }) => {
   return (
     <div className="videoFooter">
       <div className="videoFooter__text">
-        <h3>@nabendu82</h3>
-        <p>Macbook Air to new Windows editing beast</p>
-        <div className="videoFooter__ticker">
-          <MusicNote className="videoFooter__icon" />
-        </div>
+        <h3>@{channel}</h3>
+        <h4>{song}</h4>
+        <p>{description}</p>
       </div>
     </div>
   );
