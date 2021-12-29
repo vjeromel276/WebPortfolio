@@ -2,6 +2,7 @@ import "./App.css";
 
 import { Component } from "react";
 import { NavBar } from "./components/layout/NavBar";
+import { Search } from "./components/users/Search";
 import { Users } from "./components/users/Users";
 import axios from "axios";
 
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <Search />
         <Users loading={this.state.loading} users={this.state.users} />
       </div>
     );

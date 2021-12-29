@@ -3,7 +3,6 @@ import { Spinner } from "../layout/Spinner";
 import { UserItem } from "./UserItem";
 
 export const Users = ({ users, loading }) => {
-  console.log(loading);
   return (
     <div className="container">
       <div style={userStyle}>
