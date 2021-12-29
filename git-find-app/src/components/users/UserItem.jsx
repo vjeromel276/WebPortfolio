@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import PropTypes from "prop-types";
-
 export class UserItem extends Component {
   state = {
     id: "id",
@@ -9,8 +7,6 @@ export class UserItem extends Component {
     avatar_url: "https://avatars.githubusercontent.com/u/1?v=4",
     html_url: "https://github.com/mojombo",
   };
-
-  static propTypes = {};
 
   render() {
     const { avatar_url, html_url, id, login } = this.state;
