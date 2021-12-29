@@ -13,6 +13,7 @@ export class Search extends Component {
     this.setState({ text: "" });
   };
   render() {
+    console.log(this.props.showClear);
     return (
       <div>
         <form onSubmit={this.onSubmit} action="form">
@@ -29,6 +30,14 @@ export class Search extends Component {
             className="btn btn-dark btn-block"
           />
         </form>
+        {this.props.showClear && (
+          <button
+            className="btn btn-light btn-block"
+            onClick={this.props.clearUsers}
+          >
+            Clear
+          </button>
+        )}
       </div>
     );
   }
