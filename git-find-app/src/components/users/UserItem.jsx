@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { User } from "./User";
 
 export const UserItem = ({
   user,
@@ -16,7 +15,7 @@ export const UserItem = ({
       />
       <h3>{login}</h3>
       <div>
-        <Link to="/user">
+        <Link to={`/user/${login}`}>
           <div className="btn btn-dark btn-sm my1">{"More..."}</div>
         </Link>
       </div>
