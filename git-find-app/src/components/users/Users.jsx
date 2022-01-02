@@ -1,8 +1,12 @@
+import GithubContext from "../../context/github/githubContext";
 import PropTypes from "prop-types";
 import { Spinner } from "../layout/Spinner";
 import { UserItem } from "./UserItem";
+import { useContext } from "react";
 
-export const Users = ({ users, loading }) => {
+export const Users = () => {
+  const githubContext = useContext(GithubContext);
+  const { loading, users } = githubContext;
   return (
     <div className="container">
       <div style={userStyle}>
