@@ -1,5 +1,4 @@
 import GithubContext from "../../context/github/githubContext";
-import PropTypes from "prop-types";
 import { Spinner } from "../layout/Spinner";
 import { UserItem } from "./UserItem";
 import { useContext } from "react";
@@ -25,9 +24,4 @@ const userStyle = {
   display: "grid",
   gridTemplateColumns: "repeat(3,1fr)",
   gridGap: "1rem",
-};
-
-Users.propTypes = {
-  users: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
 };

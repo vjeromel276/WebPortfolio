@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export const UserItem = ({
-  user,
-  user: { id, avatar_url, login, html_url },
-}) => {
+export const UserItem = ({ user, user: { id, avatar_url, login } }) => {
   return (
     <div key={id} className="card text-center">
       <img

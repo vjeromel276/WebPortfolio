@@ -1,7 +1,7 @@
 import {
   CLEAR_USERS,
   GET_REPOS,
-  GET_USERS,
+  GET_USER,
   REMOVE_ALERT,
   SEARCH_USERS,
   SET_ALERT,
@@ -15,6 +15,19 @@ export const githubReducer = (state, action) => {
         ...state,
         users: action.payload,
         loading: false,
+      };
+    case GET_USER:
+      return {
+        ...state,
+        user: action.payload,
+        loading: false,
+      };
+
+    case CLEAR_USERS:
+      return {
+        ...state,
+        loading: false,
+        users: [],
       };
 
     case SET_LOADING:
