@@ -4,7 +4,7 @@ import {
   GET_USER,
   SEARCH_USERS,
   SET_LOADING,
-} from "./types";
+} from "../types";
 
 import GithubContext from "./githubContext";
 import axios from "axios";
