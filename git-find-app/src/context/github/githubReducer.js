@@ -22,6 +22,12 @@ export const githubReducer = (state, action) => {
         user: action.payload,
         loading: false,
       };
+    case GET_REPOS:
+      return {
+        ...state,
+        loading: false,
+        repos: action.payload,
+      };
 
     case CLEAR_USERS:
       return {
