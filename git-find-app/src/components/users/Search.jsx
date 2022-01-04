@@ -6,7 +6,7 @@ import GithubContext from "../../context/github/githubContext";
 export const Search = () => {
   const githubContext = useContext(GithubContext);
   const alertContext = useContext(AlertContext);
-  const { clearUsers } = githubContext;
+  const { clearUsers, users } = githubContext;
   const [text, setText] = useState("");
 
   const onChange = (e) => setText(e.target.value);
@@ -36,7 +36,7 @@ export const Search = () => {
           className="btn btn-dark btn-block"
         />
       </form>
-      {githubContext.users.length > 0 && (
+      {users.length > 0 && (
         <button className="btn btn-light btn-block" onClick={clearUsers}>
           Clear
         </button>
