@@ -1,7 +1,11 @@
+import GithubContext from "../../context/github/githubContext";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export const UserItem = ({ user, user: { id, avatar_url, login } }) => {
+export const UserItem = () => {
+  const githubContext = GithubContext();
+  const { user } = githubContext();
+  const { id, avatar_url, login } = user;
   return (
     <div key={id} className="card text-center">
       <img
