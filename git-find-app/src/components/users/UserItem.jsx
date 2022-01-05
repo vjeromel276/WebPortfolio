@@ -1,6 +1,5 @@
 import GithubContext from "../../context/github/githubContext";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 
 export const UserItem = () => {
   const githubContext = GithubContext();
@@ -22,13 +21,4 @@ export const UserItem = () => {
       </div>
     </div>
   );
-};
-
-//^^^^^^^ This is how you make define props tyoes ^^^^^^^^^\\
-UserItem.propType = {
-  user: PropTypes.object.isRequired,
-  id: PropTypes.string.isRequired,
-  avatar_url: PropTypes.string.isRequired,
-  login: PropTypes.string.isRequired,
-  html_url: PropTypes.string.isRequired,
 };
